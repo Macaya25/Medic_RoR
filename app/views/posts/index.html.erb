@@ -1,16 +1,28 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Posts</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bienvenido a la Clínica Médica</title>
+</head>
+<body>
+  <header>
+    <h1>Bienvenido a la Clínica Médica</h1>
+    <nav>
+      <ul>
+        <li><%= link_to 'Reservar Cita', new_appointment_path %></li>
+        <li><%= link_to 'Perfil de Usuario', user_path(current_user) if current_user %></li>
+        <!-- Agrega más enlaces de navegación según sea necesario -->
+      </ul>
+    </nav>
+  </header>
 
-<button type="button" class="btn btn-primary">Primary</button>
+  <main>
+    <!-- Contenido principal de la página, como información general, promociones, etc. -->
+  </main>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New post", new_post_path %>
+  <footer>
+    <!-- Pie de página con información de contacto, enlaces adicionales, etc. -->
+  </footer>
+</body>
+</html>

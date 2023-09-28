@@ -1,0 +1,12 @@
+
+<h2>Horas disponibles el <%= @appointment.appointment_date.strftime('%d/%m/%Y') %></h2>
+
+<% if @available_hours.any? %>
+  <ul>
+    <% @available_hours.each do |hour| %>
+      <li><%= hour.strftime('%H:%M') %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No hay horas disponibles para la especialidad y fecha seleccionadas.</p>
+<% end %>
