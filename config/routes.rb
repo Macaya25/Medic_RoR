@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :specialities
+  #resources :specialities
   resources :pacients
   resources :doctors
   resources :appointments
