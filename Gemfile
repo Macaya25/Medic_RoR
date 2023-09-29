@@ -42,11 +42,6 @@ gem "tzinfo-data", platforms: [:windows, :jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-# Elastic search
-gem 'elasticsearch-rails'
-gem 'elasticsearch-model'
-
-
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 

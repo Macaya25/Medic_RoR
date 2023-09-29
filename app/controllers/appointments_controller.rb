@@ -19,6 +19,15 @@ class AppointmentsController < ApplicationController
   def edit
   end
 
+  def search
+    search_term = params[:search_term]
+    @results = Appointment.joins(:doctor).where("medic_center ILIKE ? OR doctors.name ILIKE ?", "%#{search_term}%", "%#{search_term}%")
+
+    
+    render partial: 'search'
+
+  end
+
   # POST /appointments or /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
@@ -38,6 +47,7 @@ class AppointmentsController < ApplicationController
   def update
     respond_to do |format|
       if @appointment.update(appointment_params)
+        
         format.html { redirect_to appointment_url(@appointment), notice: "Appointment was successfully updated." }
         format.json { render :show, status: :ok, location: @appointment }
       else

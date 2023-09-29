@@ -93,3 +93,12 @@ body {
     margin-bottom: 5px;
   }
   
+  .appointment-card {
+    border: 1px solid #000000; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    padding: 10px; /* Add padding inside the card */
+    margin: 10px; /* Add margin around the card */
+    background-color: #fff; /* Background color */
+  }
+  

@@ -1,17 +1,18 @@
-<div id="<%= dom_id appointment %>">
-  <p>
-    <strong>Date:</strong>
-    <%= appointment.date %>
-  </p>
+<div id="<%= dom_id appointment %>" style="border: 1px solid #ccc; padding: 10px; margin: 10px;">
+  <div class="card-content">
+    <p>
+      <strong>Date:</strong>
+      <%= appointment.date %>
+    </p>
 
-  <p>
-    <strong>Doctor:</strong>
-    <%= appointment.doctor.name %>
-  </p>
+    <p>
+      <strong>Doctor:</strong>
+      <%= appointment.doctor.name %>
+    </p>
 
-  <p>
-    <strong>Medic center:</strong>
-    <%= appointment.medic_center %>
-  </p>
-
+    <p>
+      <strong>Medic center:</strong>
+      <%= appointment.medic_center %>
+    </p>
+  </div>
 </div>
