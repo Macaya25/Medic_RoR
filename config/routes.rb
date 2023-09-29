@@ -1,15 +1,8 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-
+¿
   resources :pacients
   resources :institutions
   resources :medical_centers
-
-=======
-  resources :pacients
-  resources :institutions
-  resources :medical_centers
->>>>>>> 888aea9d734d76184abc80d34554df25b06f8b3e
   resources :doctors
   resources :appointments
   root 'posts#index'
