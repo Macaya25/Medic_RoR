@@ -1,0 +1,28 @@
+<!-- app/views/appointments/schedule.html.erb -->
+
+<h1>Reservar una cita</h1>
+
+<%= form_with model: @appointment, url: appointments_path, method: :post do |form| %>
+  <div class="field">
+    <%= form.label :specialty_id, "Especialidad" %>
+    <!--<%= form.collection_select :specialty_id, @specialties, :id, :name, prompt: 'Seleccione una especialidad' %>-->
+  </div>
+
+  <!--<div class="field">
+    <%= form.label :clinic_id, 'Clínica' %>
+    <%= form.collection_select :clinic_id, @clinics, :id, :name, prompt: 'Seleccione una clínica' %>
+  </div>-->
+
+  <div class="field">
+    <%= form.label :appointment_date, 'Fecha' %>
+    <%= form.date_field :appointment_date, min: Date.today %>
+  </div>
+
+  <!-- Agregar calendario aquí si es necesario -->
+
+  <div class="actions">
+    <%= form.submit 'Buscar citas disponibles' %>
+  </div>
+<% end %>
+
+<!-- Mostrar las horas disponibles aquí -->

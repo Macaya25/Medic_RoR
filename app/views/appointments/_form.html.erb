@@ -1,6 +1,6 @@
-<%= form_with(model: appointment) do |form| %>
+<%= form_with(model: appointment, class: "my-5") do |form| %>
   <% if appointment.errors.any? %>
-    <div style="color: red">
+    <div class="alert alert-danger">
       <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
 
       <ul>
@@ -11,24 +11,22 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :date, style: "display: block" %>
-    <%= form.datetime_field :date %>
+  <div class="form-group">
+    <%= form.label :date, class: "control-label" %>
+    <%= form.datetime_field :date, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= label_tag "appointment[doctor_id]", "Doctor" %>
+  <div class="form-group">
+    <%= label_tag "appointment[doctor_id]", "Doctor", class: "control-label" %>
     <%= select_tag "appointment[doctor_id]", options_for_select(Doctor.all.map { |d| [d.name, d.id] }), prompt: "Select a doctor", class: "form-control" %>
   </div>
 
-  
-
-  <div>
-    <%= form.label :medic_center, style: "display: block" %>
-    <%= form.text_field :medic_center %>
+  <div class="form-group">
+    <%= form.label :medic_center, class: "control-label" %>
+    <%= form.text_field :medic_center, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="text-center">
+    <%= form.submit "Reserve Appointment", class: "btn btn-primary" %>
   </div>
 <% end %>
