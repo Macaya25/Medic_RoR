@@ -46,9 +46,15 @@ doctor1 = Doctor.create(name: 'Dr. Smith', specialty: 'Cardiology')
 doctor2 = Doctor.create(name: 'Dr. Rodriguez', specialty: 'Dermatology')
 
 # Create Appointments
+<<<<<<< HEAD
 appointment1 = Appointment.create(date: DateTime.now + 1.day, medic_center: 'Medical Center 1', doctor: doctor1,pacient:pacient1)
 appointment2 = Appointment.create(date: DateTime.now + 2.days, medic_center: 'Medical Center 2', doctor: doctor2,pacient:pacient2)
 appointment3 = Appointment.create(date: DateTime.now + 3.days, medic_center: 'Medical Center 1', doctor: doctor1,pacient:pacient3)
+=======
+appointment1 = Appointment.create(date: DateTime.now + 1.day, medical_center: 'Medical Center 1', doctor: doctor1)
+appointment2 = Appointment.create(date: DateTime.now + 2.days, medical_center: 'Medical Center 2', doctor: doctor2)
+appointment3 = Appointment.create(date: DateTime.now + 3.days, medical_center: 'Medical Center 1', doctor: doctor1)
+>>>>>>> 495fddf23a8710fab0a5a85e82b9cbf579d9bdea
 
 # Create Pacients
 pacient1 = Pacient.create(name: 'John', last_name: 'Doe', telephone: '123-456-7890', mail: 'john.doe@example.com', address: '123 Main St', inf: 'Any additional information')
