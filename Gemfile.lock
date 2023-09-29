@@ -128,6 +128,7 @@ GEM
       reline (>= 0.3.1)
     drb (2.1.1)
       ruby2_keywords
+    elasticsearch-rails (7.2.1)
     error_highlight (0.5.1)
     erubi (1.12.0)
     globalid (1.2.1)
@@ -252,6 +253,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  elasticsearch-rails
   error_highlight (>= 0.4.0)
   importmap-rails
   jbuilder

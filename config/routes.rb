@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-¿
+
   resources :pacients
   resources :institutions
   resources :medical_centers
