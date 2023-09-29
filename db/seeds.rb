@@ -18,15 +18,15 @@ i1 = Institution.create(name: 'Clinica Alemana')
 
 c1 = MedicalCenter.create(name: 'Clinica Alemana Vitacura', location: 'Vitacura', institution: i1)
 
-Appointment.create(date: DateTime.new(2023, 10, 15, 13, 0), doctor: d1, medic_center: 'Clinica Alemana')
-Appointment.create(date: DateTime.new(2023, 10, 14, 13, 0), doctor: d1, medic_center: 'Clinica Alemana')
-Appointment.create(date: DateTime.new(2023, 10, 16, 13, 0), doctor: d1, medic_center: 'Clinica Alemana')
-Appointment.create(date: DateTime.new(2023, 10, 17, 13, 0), doctor: d1, medic_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 15, 13, 0), doctor: d1, medical_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 14, 13, 0), doctor: d1, medical_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 16, 13, 0), doctor: d1, medical_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 17, 13, 0), doctor: d1, medical_center: 'Clinica Alemana')
 
-Appointment.create(date: DateTime.new(2023, 10, 9, 12, 0), doctor: d2, medic_center: 'Clinica Alemana')
-Appointment.create(date: DateTime.new(2023, 10, 10, 13, 0), doctor: d2, medic_center: 'Clinica Alemana')
-Appointment.create(date: DateTime.new(2023, 10, 10, 16, 0), doctor: d2, medic_center: 'Clinica Alemana')
-Appointment.create(date: DateTime.new(2023, 10, 10, 17, 0), doctor: d2, medic_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 9, 12, 0), doctor: d2, medical_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 10, 13, 0), doctor: d2, medical_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 10, 16, 0), doctor: d2, medical_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 10, 17, 0), doctor: d2, medical_center: 'Clinica Alemana')
 
 
 # seeds.rb
@@ -44,9 +44,9 @@ doctor1 = Doctor.create(name: 'Dr. Smith', specialty: 'Cardiology')
 doctor2 = Doctor.create(name: 'Dr. Rodriguez', specialty: 'Dermatology')
 
 # Create Appointments
-appointment1 = Appointment.create(date: DateTime.now + 1.day, medic_center: 'Medical Center 1', doctor: doctor1)
-appointment2 = Appointment.create(date: DateTime.now + 2.days, medic_center: 'Medical Center 2', doctor: doctor2)
-appointment3 = Appointment.create(date: DateTime.now + 3.days, medic_center: 'Medical Center 1', doctor: doctor1)
+appointment1 = Appointment.create(date: DateTime.now + 1.day, medical_center: 'Medical Center 1', doctor: doctor1)
+appointment2 = Appointment.create(date: DateTime.now + 2.days, medical_center: 'Medical Center 2', doctor: doctor2)
+appointment3 = Appointment.create(date: DateTime.now + 3.days, medical_center: 'Medical Center 1', doctor: doctor1)
 
 # Create Pacients
 pacient1 = Pacient.create(name: 'John', last_name: 'Doe', telephone: '123-456-7890', mail: 'john.doe@example.com', address: '123 Main St', inf: 'Any additional information')
