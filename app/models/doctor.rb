@@ -1,5 +1,5 @@
 class Doctor < ApplicationRecord
-    belongs_to :medical_center
+    #belongs_to :medical_center
     has_many :appointments
     #belongs_to :specialty
     has_many :doctor_schedules

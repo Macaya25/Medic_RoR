@@ -9,13 +9,13 @@
     <p><strong>Nombre:</strong> <%= @pacient.name %></p>
     <p><strong>Apellido:</strong> <%= @pacient.last_name %></p>
     <p><strong>Teléfono:</strong> <%= @pacient.telephone %></p>
-    <p><strong>Correo Electrónico:</strong> <%= @pacient.email %></p>
+    <p><strong>Correo Electrónico:</strong> <%= @pacient.mail %></p>
     <p><strong>Dirección:</strong> <%= @pacient.address %></p>
     <p><strong>Información Adicional:</strong> <%= @pacient.inf %></p>
   </div>
 
   <div class="user-actions">
-    <%= link_to 'Editar Perfil', edit_user_path(@pacient), class: 'btn btn-primary' %>
+    <%= link_to 'Editar Perfil', edit_pacient_path(@pacient), class: 'btn btn-primary' %>
   </div>
 </div>
 
