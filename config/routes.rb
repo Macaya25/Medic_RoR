@@ -3,14 +3,24 @@ Rails.application.routes.draw do
   resources :institutions
   resources :medical_centers
   resources :doctors
-  resources :appointments
+  resources :appointments do
+    collection do
+      get 'search' # Define a custom search action
+    end
+  end
   root 'posts#index'
   resources :posts
 
   get 'doctors/search', to: 'doctors#search'
-  get 'appointments/schedule', to: 'appointments#schedule'
+  # get 'appointments/schedule', to: 'appointments#schedule'
   
-  post 'appointments/search_availability', to: 'appointments#search_availability'
+  # post 'appointments/search_availability', to: 'appointments#search_availability'
+  # get 'search_appointments', to: 'appointments#search', as: 'search_appointments'
+
+
+
+  # get 'search_appointments', to: 'appointments#search', as: 'search_appointments'
+
 
   resource :pacient, only: [:show, :edit, :update]
 

@@ -2,6 +2,9 @@
 
 <h1>Appointments</h1>
 
+<%= render 'search' %>
+
+<!-- 
 <div id="appointments">
   <% @appointments.each do |appointment| %>
     <%= render appointment %>
@@ -9,6 +12,7 @@
       <%= link_to "Show this appointment", appointment %>
     </p>
   <% end %>
-</div>
+</div> 
+-->
 
 <%= link_to "New appointment", new_appointment_path %>

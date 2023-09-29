@@ -8,7 +8,23 @@
 
 p1=Pacient.create(name:"Maria",last_name:"Marin",telephone:"594888484",mail:"mdmarin1@miuandes.cl",address:"Maira",inf:" ")
 p2=Pacient.create(name:"Andres",last_name:"Macaya",telephone:"59483484",mail:"amacaya@miuandes.cl",address:"Las condes",inf:" ")
+
+
 # Example: Create a few doctors
-Doctor.create(name: 'Dr. John Doe', gender: 'Male')
-Doctor.create(name: 'Dr. Jane Smith', gender: 'Female')
+d1 = Doctor.create(name: 'Dr. John Doe', gender: true)
+d2 = Doctor.create(name: 'Dr. Jane Smith', gender: false)
+
+i1 = Institution.create(name: 'Clinica Alemana')
+
+c1 = MedicalCenter.create(name: 'Clinica Alemana Vitacura', location: 'Vitacura', institution: i1)
+
+Appointment.create(date: DateTime.new(2023, 10, 15, 13, 0), doctor: d1, medic_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 14, 13, 0), doctor: d1, medic_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 16, 13, 0), doctor: d1, medic_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 17, 13, 0), doctor: d1, medic_center: 'Clinica Alemana')
+
+Appointment.create(date: DateTime.new(2023, 10, 9, 12, 0), doctor: d2, medic_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 10, 13, 0), doctor: d2, medic_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 10, 16, 0), doctor: d2, medic_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 10, 17, 0), doctor: d2, medic_center: 'Clinica Alemana')
 
