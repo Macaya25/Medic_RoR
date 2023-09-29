@@ -1,13 +1,32 @@
-<!-- app/views/appointments/_search_results.html.erb -->
-<% if @results.any? %>
-  <h2>Search Results:</h2>
-  <ul>
-    <% @results.each do |appointment| %>
-        <%= render appointment %>
-        <!-- Add other appointment details you want to display -->
-      
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-light bg-light static-top">
+            <div class="container">
+                <%= link_to 'Medic', root_path, class:"navbar-brand" %>
+                <%= link_to 'Reservar Cita', appointments_path %>
+                <a class="btn btn-primary" href="#signup">Sign Up</a>
+                <%= link_to 'Paciente', root_path, class:"navbar-brand" %>
+            </div>
+        </nav>
+  <body>
+    <%= yield %>
+  <div class="masthead">
+    <!-- app/views/appointments/_search_results.html.erb -->
+    <% if @results.any? %>
+      <h2>Search Results:</h2>
+      <ul>
+        <% @results.each do |appointment| %>
+            <%= render appointment %>
+            <!-- Add other appointment details you want to display -->
+          
+        <% end %>
+      </ul>
+    <% else %>
+      <p>No results found.</p>
     <% end %>
-  </ul>
-<% else %>
-  <p>No results found.</p>
-<% end %>
+    </div>
+  </body>
+</html>
+

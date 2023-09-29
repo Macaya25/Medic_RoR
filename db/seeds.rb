@@ -11,8 +11,8 @@ p2=Pacient.create(name:"Andres",last_name:"Macaya",telephone:"59483484",mail:"am
 
 
 # Example: Create a few doctors
-d1 = Doctor.create(name: 'Dr. John Doe', gender: true)
-d2 = Doctor.create(name: 'Dr. Jane Smith', gender: false)
+d1 = Doctor.create(name: 'Dr. John Doe', gender: true, specialty:e1)
+d2 = Doctor.create(name: 'Dr. Jane Smith', gender: false,specialty:e2)
 
 i1 = Institution.create(name: 'Clinica Alemana')
 i2 = Institution.create(name: 'Integra Medica')
@@ -30,3 +30,28 @@ Appointment.create(date: DateTime.new(2023, 10, 10, 13, 0), doctor: d2, medical_
 Appointment.create(date: DateTime.new(2023, 10, 10, 16, 0), doctor: d2, medical_center: c2)
 Appointment.create(date: DateTime.new(2023, 10, 10, 17, 0), doctor: d2, medical_center: c2)
 
+#e1 = Specialty.create(name:"Dermatologia")
+#e2= Specialty.create(name:"Odontologia")
+#e3= Specialty.create(name:"Medicina General")
+
+# Create Institutions
+institution1 = Institution.create(name: 'Hospital ABC')
+institution2 = Institution.create(name: 'Clinica XYZ')
+
+# Create Medical Centers
+medical_center1 = MedicalCenter.create(name: 'Medical Center 1', location: 'City A', institution: institution1)
+medical_center2 = MedicalCenter.create(name: 'Medical Center 2', location: 'City B', institution: institution2)
+
+# Create Doctors
+doctor1 = Doctor.create(name: 'Dr. Smith', specialty: 'Cardiology')
+doctor2 = Doctor.create(name: 'Dr. Rodriguez', specialty: 'Dermatology')
+
+# Create Appointments
+appointment1 = Appointment.create(date: DateTime.now + 1.day, medic_center: 'Medical Center 1', doctor: doctor1,pacient:pacient1)
+appointment2 = Appointment.create(date: DateTime.now + 2.days, medic_center: 'Medical Center 2', doctor: doctor2,pacient:pacient2)
+appointment3 = Appointment.create(date: DateTime.now + 3.days, medic_center: 'Medical Center 1', doctor: doctor1,pacient:pacient3)
+
+# Create Pacients
+pacient1 = Pacient.create(name: 'John', last_name: 'Doe', telephone: '123-456-7890', mail: 'john.doe@example.com', address: '123 Main St', inf: 'Any additional information')
+pacient2 = Pacient.create(name: 'Jane', last_name: 'Smith', telephone: '987-654-3210', mail: 'jane.smith@example.com', address: '456 Oak St', inf: 'Any additional information')
+pacient3 = Pacient.create(name: 'Alice', last_name: 'Johnson', telephone: '555-123-4567', mail: 'alice.johnson@example.com', address: '789 Elm St', inf: 'Any additional information')

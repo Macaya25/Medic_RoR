@@ -9,21 +9,21 @@
     <p><strong>Nombre:</strong> <%= @pacient.name %></p>
     <p><strong>Apellido:</strong> <%= @pacient.last_name %></p>
     <p><strong>Teléfono:</strong> <%= @pacient.telephone %></p>
-    <p><strong>Correo Electrónico:</strong> <%= @pacient.email %></p>
+    <p><strong>Correo Electrónico:</strong> <%= @pacient.mail %></p>
     <p><strong>Dirección:</strong> <%= @pacient.address %></p>
     <p><strong>Información Adicional:</strong> <%= @pacient.inf %></p>
   </div>
 
   <div class="user-actions">
-    <%= link_to 'Editar Perfil', edit_user_path(@pacient), class: 'btn btn-primary' %>
+    <%= link_to 'Editar Perfil', edit_pacient_path(@pacient), class: 'btn btn-primary' %>
   </div>
 </div>
 
 <%= render @pacient %>
 
 <div>
-  <%= link_to "Edit this pacient", edit_pacient_path(@pacient) %> |
-  <%= link_to "Back to pacients", pacients_path %>
+  <%= link_to "Edit this pacient", edit_pacient_path(@pacient) , class: "btn-back"%> |
+  <%= link_to "Back to pacients", pacients_path, class: "btn-back"  %>
 
   <%= button_to "Destroy this pacient", @pacient, method: :delete %>
 </div>
