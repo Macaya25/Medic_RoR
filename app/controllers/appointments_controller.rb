@@ -21,7 +21,7 @@ class AppointmentsController < ApplicationController
 
   def search
     search_term = params[:search_term]
-    @results = Appointment.joins(:doctor).where("medic_center ILIKE ? OR doctors.name ILIKE ?", "%#{search_term}%", "%#{search_term}%")
+    @results = Appointment.joins(:doctor, :medical_center).where("medical_centers.name ILIKE ? OR doctors.name ILIKE ?", "%#{search_term}%", "%#{search_term}%")
 
     
     render partial: 'search'
@@ -75,6 +75,6 @@ class AppointmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def appointment_params
-      params.require(:appointment).permit(:date, :doctor_id, :medic_center)
+      params.require(:appointment).permit(:date, :doctor_id, :medical_center_id)
     end
 end

@@ -15,18 +15,20 @@ d1 = Doctor.create(name: 'Dr. John Doe', gender: true)
 d2 = Doctor.create(name: 'Dr. Jane Smith', gender: false)
 
 i1 = Institution.create(name: 'Clinica Alemana')
+i2 = Institution.create(name: 'Integra Medica')
 
 c1 = MedicalCenter.create(name: 'Clinica Alemana Vitacura', location: 'Vitacura', institution: i1)
+c2 = MedicalCenter.create(name: 'Integra Vitacura', location: 'Vitacura', institution: i2)
 
-Appointment.create(date: DateTime.new(2023, 10, 15, 13, 0), doctor: d1, medic_center: 'Clinica Alemana')
-Appointment.create(date: DateTime.new(2023, 10, 14, 13, 0), doctor: d1, medic_center: 'Clinica Alemana')
-Appointment.create(date: DateTime.new(2023, 10, 16, 13, 0), doctor: d1, medic_center: 'Clinica Alemana')
-Appointment.create(date: DateTime.new(2023, 10, 17, 13, 0), doctor: d1, medic_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 15, 13, 0), doctor: d1, medical_center: c1)
+Appointment.create(date: DateTime.new(2023, 10, 14, 13, 0), doctor: d1, medical_center: c1)
+Appointment.create(date: DateTime.new(2023, 10, 16, 13, 0), doctor: d1, medical_center: c2)
+Appointment.create(date: DateTime.new(2023, 10, 17, 13, 0), doctor: d1, medical_center: c2)
 
-Appointment.create(date: DateTime.new(2023, 10, 9, 12, 0), doctor: d2, medic_center: 'Clinica Alemana')
-Appointment.create(date: DateTime.new(2023, 10, 10, 13, 0), doctor: d2, medic_center: 'Clinica Alemana')
-Appointment.create(date: DateTime.new(2023, 10, 10, 16, 0), doctor: d2, medic_center: 'Clinica Alemana')
-Appointment.create(date: DateTime.new(2023, 10, 10, 17, 0), doctor: d2, medic_center: 'Clinica Alemana')
+Appointment.create(date: DateTime.new(2023, 10, 9, 12, 0), doctor: d2, medical_center: c1)
+Appointment.create(date: DateTime.new(2023, 10, 10, 13, 0), doctor: d2, medical_center: c1)
+Appointment.create(date: DateTime.new(2023, 10, 10, 16, 0), doctor: d2, medical_center: c2)
+Appointment.create(date: DateTime.new(2023, 10, 10, 17, 0), doctor: d2, medical_center: c2)
 
 
 # seeds.rb
