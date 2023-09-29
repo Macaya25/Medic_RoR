@@ -30,9 +30,9 @@ Appointment.create(date: DateTime.new(2023, 10, 10, 13, 0), doctor: d2, medical_
 Appointment.create(date: DateTime.new(2023, 10, 10, 16, 0), doctor: d2, medical_center: c2)
 Appointment.create(date: DateTime.new(2023, 10, 10, 17, 0), doctor: d2, medical_center: c2)
 
-e1 = Specialty.create(name:"Dermatologia")
-e2= Specialty.create(name:"Odontologia")
-e3= Specialty.create(name:"Medicina General")
+#e1 = Specialty.create(name:"Dermatologia")
+#e2= Specialty.create(name:"Odontologia")
+#e3= Specialty.create(name:"Medicina General")
 
 # Create Institutions
 institution1 = Institution.create(name: 'Hospital ABC')
