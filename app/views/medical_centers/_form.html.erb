@@ -16,6 +16,13 @@
     <%= form.text_field :name %>
   </div>
 
+  <div class="field">
+    <%= label_tag "medical_center[institution_id]", "Medical Institution" %>
+    <%= select_tag "medical_center[institution_id]", options_for_select(Institution.all.map { |d| [d.name, d.id] }), prompt: "Select an Institution", class: "form-control" %>
+  </div>
+
+
+
   <div>
     <%= form.label :location, style: "display: block" %>
     <%= form.text_field :location %>

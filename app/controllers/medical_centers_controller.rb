@@ -65,6 +65,7 @@ class MedicalCentersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def medical_center_params
-      params.require(:medical_center).permit(:name, :location)
+      params.require(:medical_center).permit(:name, :institution_id, :location)
     end
+    
 end
