@@ -10,13 +10,13 @@ default: &default
 
 development:
   <<: *default
-  database: video_development
+  database: medic_development
   username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 test:
   <<: *default
-  database: video_test
+  database: medic_test
   username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
 
