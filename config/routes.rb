@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  #resources :specialities
   resources :pacients
+  resources :institutions
+  resources :medical_centers
   resources :doctors
   resources :appointments
   root 'posts#index'
