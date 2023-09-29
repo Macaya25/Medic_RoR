@@ -22,8 +22,12 @@
   </div>
 
   <div class="form-group">
-    <%= form.label :medic_center, class: "control-label" %>
-    <%= form.text_field :medic_center, class: "form-control" %>
+    <%= label_tag "appointment[medical_center_id]", "Medical Center", class: "control-label" %>
+    <%= select_tag "appointment[medical_center_id]", options_for_select(MedicalCenter.all.map { |d| [d.name, d.id] }), prompt: "Select a medical center", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= label_tag "appointment[specialty_id]", "Specialty", class: "control-label" %>
+    <%= select_tag "appointment[specialty_id]", options_for_select(Specialty.all.map { |s| [s.name, s.id] }), prompt: "Select a specialty", class: "form-control" %>
   </div>
 
   <div class="text-center">

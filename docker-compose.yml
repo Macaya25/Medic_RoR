@@ -38,6 +38,15 @@ services:
   #    - 9200:9200
   #  volumes:
   #    - es_data:/usr/share/elasticsearch/data
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:81"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - web
+
 
 volumes:
   medic_db_storage: {}

@@ -1,38 +1,37 @@
 <p style="color: green"><%= notice %></p>
- <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="a   uthor" content="" />
-        <title>Medic</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="app/assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/stylesf.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-light bg-light static-top">
-            <div class="container">
-                <%= link_to 'Medic', root_path, class:"navbar-brand" %>
-                <%= link_to 'Reservar Cita', new_appointment_path %>
-                <a class="btn btn-primary" href="#signup">Sign Up</a>
-                <%= link_to 'Paciente', root_path, class:"navbar-brand" %>
-            </div>
-        </nav>
-<h1>Pacients</h1>
 
-<div id="pacients">
-  <% @pacients.each do |pacient| %>
-    <%= render pacient %>
-    <p>
-      <%= link_to "Show this pacient", pacient %>
-    </p>
-  <% end %>
-</div>
+<h1>Pacients</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Last Name</th>
+      <th>Telephone</th>
+      <th>Mail</th>
+      <th>Address</th>
+      <th>Inf</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pacients.each do |pacient| %>
+      <tr id="<%= dom_id pacient %>">
+        <td><%= pacient.name %></td>
+        <td><%= pacient.last_name %></td>
+        <td><%= pacient.telephone %></td>
+        <td><%= pacient.mail %></td>
+        <td><%= pacient.address %></td>
+        <td><%= pacient.inf %></td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <%= link_to "Show this pacient", @pacient %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
 
 <%= link_to "New pacient", new_pacient_path %>

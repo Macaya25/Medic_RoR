@@ -3,8 +3,8 @@
 <%= render @institution %>
 
 <div>
-  <%= link_to "Edit this medical institution", edit_institution_path(@institution) %> |
-  <%= link_to "Back to medical institutions", institutions_path %>
+  <%= link_to "Edit this medical institution", edit_institution_path(@institution), class: "btn-back" %> |
+  <%= link_to "Back to medical institutions", institutions_path , class: "btn-back" %>
 
   <%= button_to "Destroy this medical institution", @institution, method: :delete %>
 </div>
