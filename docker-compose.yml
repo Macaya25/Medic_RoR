@@ -12,7 +12,10 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     ports:
-      - "5432:5432"
+      - "5433:5432"
+    networks:
+      - my-network 
+
   web:
     build: .
     command: "./bin/rails server"
@@ -29,6 +32,8 @@ services:
       - db
     ports:
       - "3000:3000"
+    networks:
+      - my-network 
   
   # elasticsearch:
   #  image: docker.elastic.co/elasticsearch/elasticsearch:7.15.0
@@ -46,9 +51,14 @@ services:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - web
+    networks:
+      - my-network 
 
 
 volumes:
   medic_db_storage: {}
   web-app-storage: {}
   #es_data: {}
+
+networks:
+  my-network:
