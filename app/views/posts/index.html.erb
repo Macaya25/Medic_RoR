@@ -1,30 +1,69 @@
 <p style="color: green"><%= notice %></p>
 
 <!DOCTYPE html>
-<html>
-<head>
-  <!-- Include jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
-  <title>Bienvenido a la Clínica Médica</title>
-</head>
-<body>
-  <header>
-    <h1>Bienvenido a la Clínica Médica</h1>
-    <nav>
-      <ul>
-        <li><%= link_to 'Reservar Cita', new_appointment_path %></li>
-        <li><%= link_to 'Perfil de Usuario', pacients_path%></li>
-        <!-- Agrega más enlaces de navegación según sea necesario -->
-      </ul>
-    </nav>
-  </header>
+<html lang="en">
+ 
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-white">
+                            <!-- Page heading-->
+                            <h1 class="mb-5">Reserva tu cita médica en línea de manera fácil y rápida</h1>
+                            <!-- Signup form-->
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- * * SB Forms Contact Form * *-->
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- This form is pre-integrated with SB Forms.-->
+                            <!-- To make this form functional, sign up at-->
+                            <!-- https://startbootstrap.com/solution/contact-forms-->
+                            <!-- to get an API token!-->
+                            <div class="row" id="contactForm">                           
+                                <button type="button" class="btn-danger" style="margin-left:20px" ><%= link_to 'Reservar Cita', appointments_path %></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Icons Grid-->
+        <section class="features-icons bg-light text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-calendar-check m-auto text-primary"></i></div>
+                            <h3>Agenda tus Citas Médicas</h3>
+                            <p class="lead mb-0">Reserva fácilmente tus citas médicas desde la comodidad de tu hogar. ¡Tu salud en tus manos!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-building m-auto text-primary"></i></div>
+                            <h3>Conecta con Clínicas</h3>
+                            <p class="lead mb-0">Explora y elige entre una variedad de clínicas. Estamos conectados con centros médicos de calidad.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-clock m-auto text-primary"></i></div>
+                            <h3>Horarios Flexibles</h3>
+                            <p class="lead mb-0">Adapta tus citas según tu horario. Fácil de usar y listo para programar tus consultas médicas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <main>
-  </main>
-
-  <footer>
-    <!-- Pie de página con información de contacto, enlaces adicionales, etc. -->
-  </footer>
-</body>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="app/javascript/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
 </html>

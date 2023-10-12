@@ -1,14 +1,37 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Pacients</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Last Name</th>
+      <th>Telephone</th>
+      <th>Mail</th>
+      <th>Address</th>
+      <th>Inf</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pacients.each do |pacient| %>
+      <tr id="<%= dom_id pacient %>">
+        <td><%= pacient.name %></td>
+        <td><%= pacient.last_name %></td>
+        <td><%= pacient.telephone %></td>
+        <td><%= pacient.mail %></td>
+        <td><%= pacient.address %></td>
+        <td><%= pacient.inf %></td>
+      </tr>
 
-<div id="pacients">
-  <% @pacients.each do |pacient| %>
-    <%= render pacient %>
-    <p>
-      <%= link_to "Show this pacient", pacient %>
-    </p>
-  <% end %>
-</div>
+      <tr>
+        <td colspan="2">
+          <%= link_to "Show this pacient", @pacient %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
 
 <%= link_to "New pacient", new_pacient_path %>

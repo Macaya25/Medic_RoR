@@ -22,8 +22,8 @@
 <%= render @pacient %>
 
 <div>
-  <%= link_to "Edit this pacient", edit_pacient_path(@pacient) %> |
-  <%= link_to "Back to pacients", pacients_path %>
+  <%= link_to "Edit this pacient", edit_pacient_path(@pacient) , class: "btn-back"%> |
+  <%= link_to "Back to pacients", pacients_path, class: "btn-back"  %>
 
   <%= button_to "Destroy this pacient", @pacient, method: :delete %>
 </div>
