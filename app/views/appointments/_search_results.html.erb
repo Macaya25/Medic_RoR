@@ -7,7 +7,7 @@
                 <%= link_to 'Medic', root_path, class:"navbar-brand" %>
                 <%= link_to 'Reservar Cita', appointments_path %>
                 <a class="btn btn-primary" href="#signup">Sign Up</a>
-                <%= link_to 'Paciente', root_path, class:"navbar-brand" %>
+                <%= link_to 'Pacientes', root_path, class:"navbar-brand" %>
             </div>
         </nav>
   <body>
@@ -30,3 +30,16 @@
   </body>
 </html>
 
+<!-- app/views/appointments/_search_results.html.erb -->
+<h1>Results</h1>
+<p><%= @results["message"] %></p>
+
+<% if @results.any? %>
+  <h2>Search Results:</h2>
+  <ul>
+    <% @results %>
+      
+  </ul>
+<% else %>
+  <p>No results found.</p>
+<% end %> 
