@@ -59,11 +59,13 @@
     </thead>
     <tbody>
       <% for result in @results['hits']['hits'] %>
-      <td> <%= result['_source']['doctor_name'] %> </td>
-      <td> <%= result['_source']['specialty'] %> </td>
-      <td> <%= result['_source']['medic_center'] %> </td>
-      <td> <%= result['_source']['location'] %> </td>
-      <td> <%= result['_source']['date'] %> </td>
+      <tr> 
+        <td> <%= result['_source']['doctor_name'] %> </td>
+        <td> <%= result['_source']['specialty'] %> </td>
+        <td> <%= result['_source']['medic_center'] %> </td>
+        <td> <%= result['_source']['location'] %> </td>
+        <td> <%= result['_source']['date'] %> </td>
+      </tr>
       <% end %>
     </tbody>
     
