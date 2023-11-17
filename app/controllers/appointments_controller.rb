@@ -24,7 +24,7 @@ class AppointmentsController < ApplicationController
     # @results = Appointment.joins(:doctor, :medical_center).where("medical_centers.name ILIKE ? OR doctors.name ILIKE ?", "%#{search_term}%", "%#{search_term}%")
     
     # http://direccion ip del pc/appointments
-    url = 'http://192.168.100.3:9200/appointments_index/_search?q=%s' % search_term
+    url = 'https://vpc-iaps-medics-domain-4om4eyngnbu4bbphyscl3hy46y.us-west-2.es.amazonaws.com/appointments_index/_search?q=%s' % search_term
     @results = HTTParty.get(url)
     
     
