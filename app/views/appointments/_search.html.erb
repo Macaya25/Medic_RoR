@@ -1,9 +1,10 @@
 <!-- app/views/appointments/_search.html.erb -->
 
-<%= form_tag(search_appointments_path, method: :get) do %>
-  <%= text_field_tag :search_term, params[:search_term], placeholder: "Search appointments..." %>
-  <%= submit_tag "Search" %>
+<%= form_tag(search_appointments_path, method: :get, class: "my-3") do %>
+  <div class="input-group">
+    <%= text_field_tag :search_term, params[:search_term], placeholder: "Search appointments...", class: "form-control" %>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </div>
 <% end %>
 
 <%= render partial: 'search_results' if @results.present? %>
-

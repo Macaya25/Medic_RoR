@@ -1,12 +1,12 @@
-<div id="<%= dom_id doctor %>">
-  <p>
-    <strong>Name:</strong>
-    <%= doctor.name %>
-  </p>
+<div id="<%= dom_id doctor %>" class="card my-3">
+  <div class="card-body">
+    <h5 class="card-title"><%= doctor.name %></h5>
 
-  <p>
-    <strong>Gender:</strong>
-    <%= doctor.gender %>
-  </p>
-
+    <div class="card-text">
+      <p>
+        <strong>Gender:</strong>
+        <%= doctor.gender ? "Femenino" : "Masculino" %>
+      </p>
+    </div>
+  </div>
 </div>

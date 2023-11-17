@@ -2,7 +2,6 @@
   <% if appointment.errors.any? %>
     <div class="alert alert-danger">
       <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
-
       <ul>
         <% appointment.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -17,15 +16,14 @@
   </div>
 
   <div class="form-group">
-    <%= label_tag "appointment[doctor_id]", "Doctor", class: "control-label" %>
-    <%= select_tag "appointment[doctor_id]", options_for_select(Doctor.all.map { |d| [d.name, d.id] }), prompt: "Select a doctor", class: "form-control" %>
+    <%= form.label :doctor_id, "Doctor", class: "control-label" %>
+    <%= form.collection_select :doctor_id, Doctor.all, :id, :name, { prompt: "Select a doctor" }, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= label_tag "appointment[medical_center_id]", "Medical Center", class: "control-label" %>
-    <%= select_tag "appointment[medical_center_id]", options_for_select(MedicalCenter.all.map { |d| [d.name, d.id] }), prompt: "Select a medical center", class: "form-control" %>
+    <%= form.label :medical_center_id, "Medical Center", class: "control-label" %>
+    <%= form.collection_select :medical_center_id, MedicalCenter.all, :id, :name, { prompt: "Select a medical center" }, class: "form-control" %>
   </div>
-
 
   <div class="text-center">
     <%= form.submit "Reserve Appointment", class: "btn btn-primary" %>
